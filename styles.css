@@ -1,3 +1,105 @@
+@font-face {
+    font-family: Young-Serif;
+    src: url(YoungSerif-Regular.ttf);
+}
+
 * {
     box-sizing: border-box;
+    font-family: "Young-Serif";
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    background-image: url("Ribic-Thor.jpg");
+    min-width: 30%;
+    
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    height: 200px;
+    margin-top: 15vh;
+   
+}
+
+.banner > img {
+    height: 150px;
+}
+
+.banner > h4 {
+    color: antiquewhite;
+    font-size: 2rem;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgb(206, 211, 214);
+    text-align: left;
+}
+
+.form-column .header {
+    font-size: 1.4rem;
+    min-width: 45ch;
+    max-width: 60ch;
+    padding: 40px;
+}
+
+.form {
+    display: flex;
+    justify-content: left;
+    background-color: rgb(95, 95, 92);
+    
+    width: 100%;
+    padding: 20px 40px 35px 40px;
+    margin: 0;
+    font-size: .8rem;
+}
+
+.form-header,
+.form-row-1,
+.form-row-2,
+.form-row-3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+   
+}
+
+.spacer {
+    width: 5vw;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-bottom: 20px;
+}
+.button-section {
+    font-size: 1.1rem;
+    padding: 40px;
+}
+
+legend {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+
 }
