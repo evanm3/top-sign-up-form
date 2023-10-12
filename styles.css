@@ -92,12 +92,15 @@ body {
 .form {
     display: flex;
     justify-content: left;
-    background-color: rgb(95, 95, 92);
+    background-color: rgb(202, 202, 197);
     box-shadow: 0px 2px 15px 0px rgba(0,0,0,.5);
     width: 100%;
     padding: 20px 40px 35px 40px;
     margin: 0;
     font-size: .75rem;
+    letter-spacing: .07rem;
+    
+    
 }
 
 .form-row-1,
@@ -117,13 +120,17 @@ body {
     flex-direction: column;
 }
 
+
 button {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 10px 40px;
     border-radius: 5px;
     background-color: var(--button-link-color);
     color: whitesmoke;
     font-size: 1.15rem;
+    border: none;
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,.5);
+
 }
 
 button:hover {
@@ -132,10 +139,53 @@ button:hover {
 
 .button-section {
     font-size: 1.1rem;
-    padding: 40px;
+    padding: 30px 40px 40px 40px;
 }
 
 legend {
     font-size: 1.4rem;
     margin-bottom: 20px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+input + span {
+    position: relative;
+    top: -50px;
+    left: 180px;
+}
+
+input + span::before {
+    position: absolute;
+}
+
+input:invalid + span::before {
+    content: "✖";
+    color: red;
+}
+
+input:valid + span::before {
+    content: "✔";
+    color: green;
+}
+
+input:focus {
+    border: 3px solid blue;
+}
+
+input:invalid {
+    border: 3px solid red;
+}
+
+input:valid {
+    background-color: rgb(250, 240, 220);
+    opacity: .5;
+    
 }
