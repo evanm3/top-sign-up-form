@@ -3,6 +3,11 @@
     src: url(YoungSerif-Regular.ttf);
 }
 
+:root {
+    --button-link-color: rgb(172, 63, 24);
+}
+
+
 * {
     box-sizing: border-box;
     font-family: "Young-Serif";
@@ -11,51 +16,75 @@
     
 }
 
+a {
+    color: var(--button-link-color);
+    text-decoration: none;
+}
+
+/* a:visited {
+    color: rgb(43, 98, 218);
+} */
+
 body {
     display: flex;
-    align-items: stretch;
     height: 100vh;
+    
 }
 
 .image-column {
     display: flex;
     flex-direction: column;
     background-image: url("Ribic-Thor.jpg");
-    min-width: 30%;
-    
+    flex-grow: 1;
+    justify-content: space-between;
 }
+
 .banner {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: black;
-    opacity: .5;
+    background-color: rgba(0,0,0,.5);
+    color: white;
     height: 200px;
     margin-top: 15vh;
-   
+    padding: 20px;
 }
 
 .banner > img {
     height: 150px;
+    opacity: 1;
 }
 
 .banner > h4 {
-    color: antiquewhite;
+    color: white;
     font-size: 2rem;
+}
+
+.image-column-footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: .8rem;
+    padding-bottom: 12px;
+}
+
+.image-column-footer a {
+    color: black;
+    text-decoration: underline;
 }
 
 .form-column {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    flex-grow: 2;
     background-color: rgb(206, 211, 214);
     text-align: left;
+    width: min(600px, 70vw);
 }
 
 .form-column .header {
     font-size: 1.4rem;
-    min-width: 45ch;
+    /* min-width: 45ch; */
     max-width: 60ch;
     padding: 40px;
 }
@@ -64,21 +93,19 @@ body {
     display: flex;
     justify-content: left;
     background-color: rgb(95, 95, 92);
-    
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,.5);
     width: 100%;
     padding: 20px 40px 35px 40px;
     margin: 0;
-    font-size: .8rem;
+    font-size: .75rem;
 }
 
-.form-header,
 .form-row-1,
 .form-row-2,
 .form-row-3 {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-   
 }
 
 .spacer {
@@ -92,7 +119,17 @@ body {
 
 button {
     margin-bottom: 20px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: var(--button-link-color);
+    color: whitesmoke;
+    font-size: 1.15rem;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
 .button-section {
     font-size: 1.1rem;
     padding: 40px;
@@ -101,5 +138,4 @@ button {
 legend {
     font-size: 1.4rem;
     margin-bottom: 20px;
-
 }
