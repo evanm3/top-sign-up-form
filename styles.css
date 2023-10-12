@@ -156,6 +156,10 @@ input {
     outline: none;
 }
 
+input:default {
+    border: none;
+}
+
 input + span {
     position: relative;
     top: -50px;
@@ -166,13 +170,14 @@ input + span::before {
     position: absolute;
 }
 
-input:invalid + span::before {
+input:focus:invalid + span::before {
     content: "✖";
     color: red;
 }
 
-input:valid + span::before {
+input:focus:valid + span::before {
     content: "✔";
+    top: -2px;
     color: green;
 }
 
@@ -180,12 +185,21 @@ input:focus {
     border: 3px solid blue;
 }
 
-input:invalid {
-    border: 3px solid red;
+input:focus:invalid {
+    border: 2px solid red;
 }
 
-input:valid {
+input:focus:valid {
     background-color: rgb(250, 240, 220);
     opacity: .5;
     
+}
+
+
+
+.error-text {
+    position: relative;
+    font-size: .8em;
+    color: red;
+    text-transform: uppercase;
 }
