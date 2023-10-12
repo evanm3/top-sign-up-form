@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP SIGN UP FORM</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer><</script>
 </head>
 <body>
     <div class="image-column">
@@ -70,26 +71,34 @@
                             id="phone-number" 
                             name="user-name"
                             
-                            pattern="(\d{3}[\-]\d{3}[\-]\d{4})"
-                            placeholder="xxx-xxx-xxxx">
+                            pattern="(\d{10})"
+                            placeholder="xxxxxxxxxx">
                     <span></span>
                 </div>
             </div>
             <div class="form-row-3">
                 <div class="form-row">
                     <label for="password">PASSWORD</label>
-                    <input type="text" 
+                    <input type="password" 
                             id="password" 
-                            name="user-password">
+                            name="user-password"
+                            class="error"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            required>
                     <span></span>
+                    <div id="password-error-text" class="error-text"></div>
                 </div> 
                 <div class="spacer"></div>
                 <div class="form-row">
                     <label for="password-confirm">CONFIRM PASSWORD</label>
-                    <input type="text" 
+                    <input type="password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                             id="password-confirm" 
-                            name="user-password-confirm">
+                            name="user-password-confirm"
+                            class="error"
+                            required>
                     <span></span>
+                    <div id="password-error-text-two" class="error-text">text</div>
                 </div>
             </div>
             </form>
