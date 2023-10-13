@@ -27,27 +27,27 @@
             <p>You <em>know</em> you want to.</p>
         </div>
         <div class="form">
-            <form>
+            <form action="#" method="post">
                 <legend>Let's do this!</legend>
             <div class="form-row-1">
                 <div class="form-row">
-                    <label for="first-name">FIRST NAME</label>
+                    <label for="first-name">FIRST NAME*</label>
                     <input type="text" 
                             id="first-name" 
                             name="user-first-name"
-                            placeholder="John"
+                            placeholder="Beta-Ray"
                             minlength="1"
                             required>
                             <span></span>
                 </div> 
                 <div class="spacer"></div>
                 <div class="form-row">
-                    <label for="last-name">LAST NAME</label>
+                    <label for="last-name">LAST NAME*</label>
                     <input 
                         id="last-name" 
                         type="text" 
                         name="user_last-name"
-                        placeholder="Doe"
+                        placeholder="Bill"
                         minlength="1"
                         required>
                     <span></span>
@@ -55,12 +55,12 @@
             </div>
             <div class="form-row-2">
                 <div class="form-row">
-                    <label for="email">EMAIL</label>
+                    <label for="email">EMAIL*</label>
                     <input 
                         id="email" 
                         type="email" 
                         name="user_email"
-                        placeholder="johndoe123@gmail.com"
+                        placeholder="bifrost@gmail.com"
                         required>
                     <span></span>
                 </div> 
@@ -70,7 +70,6 @@
                     <input type="text" 
                             id="phone-number" 
                             name="user-name"
-                            
                             pattern="(\d{10})"
                             placeholder="xxxxxxxxxx">
                     <span></span>
@@ -78,7 +77,7 @@
             </div>
             <div class="form-row-3">
                 <div class="form-row">
-                    <label for="password">PASSWORD</label>
+                    <label for="password">PASSWORD*</label>
                     <input type="password" 
                             id="password" 
                             name="user-password"
@@ -90,7 +89,7 @@
                 </div> 
                 <div class="spacer"></div>
                 <div class="form-row">
-                    <label for="password-confirm">CONFIRM PASSWORD</label>
+                    <label for="password-confirm">CONFIRM PASSWORD*</label>
                     <input type="password"
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                             id="password-confirm" 
@@ -98,15 +97,15 @@
                             class="error"
                             required>
                     <span></span>
-                    <div id="password-error-text-two" class="error-text">text</div>
+                    <div id="password-error-text-two" class="error-text"></div>
                 </div>
             </div>
-            </form>
         </div>
         <div class="button-section">
-            <button>Create Account</button>
+            <button type="submit">Create Account</button>
             <p>Already have an account? <a href="">Log in</a></p>
         </div>
+        </form>
     </div>
 </body>
 </html>

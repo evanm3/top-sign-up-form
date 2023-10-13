@@ -7,7 +7,6 @@
     --button-link-color: rgb(172, 63, 24);
 }
 
-
 * {
     box-sizing: border-box;
     font-family: "Young-Serif";
@@ -21,9 +20,9 @@ a {
     text-decoration: none;
 }
 
-/* a:visited {
+a:visited {
     color: rgb(43, 98, 218);
-} */
+}
 
 body {
     display: flex;
@@ -99,8 +98,6 @@ body {
     margin: 0;
     font-size: .75rem;
     letter-spacing: .07rem;
-    
-    
 }
 
 .form-row-1,
@@ -120,7 +117,6 @@ body {
     flex-direction: column;
 }
 
-
 button {
     margin-bottom: 30px;
     padding: 10px 40px;
@@ -130,7 +126,6 @@ button {
     font-size: 1.15rem;
     border: none;
     box-shadow: 0px 2px 15px 0px rgba(0,0,0,.5);
-
 }
 
 button:hover {
@@ -154,6 +149,7 @@ input {
     margin: 0;
     border: none;
     outline: none;
+    width: 240px;
 }
 
 input:default {
@@ -163,7 +159,7 @@ input:default {
 input + span {
     position: relative;
     top: -50px;
-    left: 180px;
+    left: 220px;
 }
 
 input + span::before {
@@ -191,15 +187,13 @@ input:focus:invalid {
 
 input:focus:valid {
     background-color: rgb(250, 240, 220);
-    opacity: .5;
-    
+    opacity: .8;
 }
 
-
-
 .error-text {
-    position: relative;
     font-size: .8em;
     color: red;
     text-transform: uppercase;
+    max-width: 40ch;
+    padding: 2px;
 }
