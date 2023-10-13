@@ -1,6 +1,6 @@
 @font-face {
     font-family: Young-Serif;
-    src: url(YoungSerif-Regular.ttf);
+    src: url(/imgs-ttfs/YoungSerif-Regular.ttf);
 }
 
 :root {
@@ -12,7 +12,6 @@
     font-family: "Young-Serif";
     margin: 0;
     padding: 0;
-    
 }
 
 a {
@@ -27,13 +26,12 @@ a:visited {
 body {
     display: flex;
     height: 100vh;
-    
 }
 
 .image-column {
     display: flex;
     flex-direction: column;
-    background-image: url("Ribic-Thor.jpg");
+    background-image: url("/imgs-ttfs/Ribic-Thor.jpg");
     flex-grow: 1;
     justify-content: space-between;
 }
